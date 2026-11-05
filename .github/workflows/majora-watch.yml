@@ -3,9 +3,13 @@ name: Majora's Mask Watch
 on:
   schedule:
     - cron: "*/5 * * * *"    # every 5 minutes (GitHub's minimum; runs can start a few minutes late)
-       workflow_dispatch:
-       inputs:
-         test_alarm: {description: "Fire a TEST alarm", type: boolean, default: false}
+  workflow_dispatch:
+    inputs:
+      test_alarm:
+        description: "Fire a TEST alarm to your phone"
+        type: boolean
+        default: false
+
 permissions:
   contents: write
 
